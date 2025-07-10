@@ -436,12 +436,32 @@ footer {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
+    /* Tambahkan ini untuk perbaikan alignment: */
+    margin: 0;          /* Menghilangkan margin default */
+    list-style-position: inside; /* Memastikan bullet point tetap di dalam */
+}
+
+/* Jarak antar paragraf */
+.about-details p {
+    margin-bottom: 16px; /* Sesuaikan nilai sesuai kebutuhan */
+}
+
+/* Jarak setelah heading (Keahlian/Media Sosial) */
+.about-details h3 {
+    margin-top: 24px;    /* Jarak dari elemen sebelumnya */
+    margin-bottom: 12px; /* Jarak ke konten setelahnya (list/link) */
+}
+
+.about-details ul {
+    padding-left: 20px; /* Jarak bullet dari kiri */
+    margin: 0;          /* Menghilangkan margin bawaan */
+margin-bottom: 24px;  /* Jarak setelah list Keahlian */
 }
 
 .social-links {
     display: flex;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .social-link {
