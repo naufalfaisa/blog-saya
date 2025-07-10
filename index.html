@@ -4,59 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog Naufal Faisa</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="min-h-screen">
 
   <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-10">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">blog.naufalfaisa.my.id</h1>
-      <nav>
-        <a href="/" class="text-blue-600 hover:underline mx-2">Home</a>
-        <a href="#about" class="text-blue-600 hover:underline mx-2">About</a>
-        <a href="#contact" class="text-blue-600 hover:underline mx-2">Contact</a>
+  <header class="glass-card shadow-md sticky top-0 z-50">
+    <div class="content-width mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row justify-between items-center">
+      <h1 class="text-lg sm:text-xl font-bold text-white">blog.naufalfaisa.my.id</h1>
+      <nav class="mt-2 sm:mt-0">
+        <a href="/" class="text-white hover:underline mx-2 sm:mx-3 text-sm sm:text-base">Home</a>
+        <a href="#about" class="text-white hover:underline mx-2 sm:mx-3 text-sm sm:text-base">About</a>
+        <a href="#contact" class="text-white hover:underline mx-2 sm:mx-3 text-sm sm:text-base">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="bg-gradient-to-br from-blue-100 to-purple-100 py-10">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-semibold mb-2">Halo, saya Naufal!</h2>
-      <p class="text-lg">Beginner developer yang suka eksperimen dengan Python, web, dan bot Telegram.</p>
+  <!-- Hero section -->
+  <section class="py-12 sm:py-16 text-white">
+    <div class="content-width mx-auto glass-card rounded-xl p-6 sm:p-8">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 leading-tight">Halo, saya Naufal!</h2>
+      <p class="text-sm sm:text-base opacity-90 leading-relaxed">
+        Beginner developer yang suka eksperimen dengan Python, web, dan bot Telegram.
+      </p>
     </div>
   </section>
 
-  <!-- Blog Posts -->
-  <main class="max-w-3xl mx-auto px-4 py-10">
-    <h3 class="text-2xl font-bold mb-6">📝 Postingan Terbaru</h3>
+  <!-- Konten utama -->
+  <main class="content-width mx-auto py-8 sm:py-10 -mt-8 sm:-mt-10">
+    <div class="glass-card rounded-xl shadow-xl p-4 sm:p-6">
+      <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Postingan Terbaru</h3>
 
-    <div class="space-y-6">
-      <!-- Artikel 1 -->
-      <a href="/posts/taskmaster-pro.html" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition">
-        <h4 class="text-xl font-semibold">Membangun TaskMasterPro dengan Python</h4>
-        <p class="text-gray-600 mt-1">Sistem to-do list interaktif dengan fitur undo, deadline, dan prioritas.</p>
-        <span class="text-sm text-blue-600">Baca selengkapnya →</span>
-      </a>
+      <div class="space-y-4 sm:space-y-6">
+        <!-- Artikel 1 -->
+        <a href="/posts/taskmaster-pro.html" class="block glass-card rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
+          <h4 class="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3 leading-snug">Membangun TaskMasterPro dengan Python</h4>
+          <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+            Sistem to-do list interaktif dengan fitur undo, deadline, dan prioritas.
+          </p>
+          <span class="inline-block mt-3 text-xs sm:text-sm text-blue-200 hover:text-white transition">Baca selengkapnya →</span>
+        </a>
 
-      <!-- Artikel 2 -->
-      <a href="/posts/apple-music-bot.html" class="block p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition">
-        <h4 class="text-xl font-semibold">DriveMusicBot dari Google Drive</h4>
-        <p class="text-gray-600 mt-1">Cara membangun bot Telegram yang mengakses lagu dari Google Drive sebagai database.</p>
-        <span class="text-sm text-blue-600">Baca selengkapnya →</span>
-      </a>
+        <!-- Artikel 2 -->
+        <a href="/posts/apple-music-bot.html" class="block glass-card rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
+          <h4 class="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3 leading-snug">DriveMusicBot dari Google Drive</h4>
+          <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+            Membuat bot Telegram yang mengakses lagu dari Google Drive sebagai database.
+          </p>
+          <span class="inline-block mt-3 text-xs sm:text-sm text-blue-200 hover:text-white transition">Baca selengkapnya →</span>
+        </a>
+      </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-t mt-10 py-6">
-    <div class="max-w-3xl mx-auto px-4 text-center text-sm text-gray-500">
-      <p>© 2025 Naufal Faisa</p>
-      <div class="mt-2 space-x-3">
-        <a href="https://instagram.com/naufalfaisa_" class="hover:underline text-blue-600">Instagram</a>
-        <a href="https://github.com/naufalfaisa" class="hover:underline text-blue-600">GitHub</a>
-        <a href="https://facebook/naufalfaisa17" class="hover:underline text-blue-600">Facebook</a>
+  <footer class="glass-card mt-8 sm:mt-10 py-6 sm:py-8">
+    <div class="content-width mx-auto text-center">
+      <p class="text-white text-sm sm:text-base">© 2025 Naufal Faisa</p>
+      <div class="mt-3 sm:mt-4 space-x-3 sm:space-x-4">
+        <a href="https://instagram.com/naufalfaisa_" class="text-white hover:text-blue-200 transition text-sm sm:text-base">Instagram</a>
+        <a href="https://github.com/naufalfaisa" class="text-white hover:text-blue-200 transition text-sm sm:text-base">GitHub</a>
+        <a href="https://facebook/naufalfaisa17" class="text-white hover:text-blue-200 transition text-sm sm:text-base">Facebook</a>
       </div>
     </div>
   </footer>
