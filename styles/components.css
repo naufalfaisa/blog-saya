@@ -13,6 +13,7 @@
 
 .search-container {
   display: flex;
+  gap: 6px; /* tambahkan ini */
   margin-bottom: 20px;
 }
 
@@ -20,7 +21,7 @@
   flex: 1;
   padding: 10px;
   border: 1px solid var(--border-color);
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   background-color: var(--secondary-color);
   color: var(--text-color);
 }
@@ -30,7 +31,7 @@
   background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
 }
 
