@@ -21,10 +21,10 @@ function displayArticles(articlesToShow, containerId, limit = null) {
 
 function getCategoryName(category) {
     const categories = {
-        'technology': 'Teknologi',
-        'education': 'Pendidikan',
-        'hobby': 'Hobi',
-        'life': 'Kehidupan'
+        'anime': 'Anime',
+        'game': 'Game',
+        'coding': 'Coding',
+        'life': 'Life'
     };
     return categories[category] || category;
 }
