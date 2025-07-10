@@ -1,74 +1,140 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Naufal Faisa</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Sederhana</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen">
-
-  <!-- Header -->
-  <header class="glass-card shadow-md sticky top-0 z-50">
-    <div class="content-width mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row justify-between items-center">
-      <h1 class="text-lg sm:text-xl font-bold text-white">blog.naufalfaisa.my.id</h1>
-      <nav class="mt-2 sm:mt-0">
-        <a href="/" class="text-white hover:underline mx-2 sm:mx-3 text-sm sm:text-base">Home</a>
-        <a href="#about" class="text-white hover:underline mx-2 sm:mx-3 text-sm sm:text-base">About</a>
-        <a href="#contact" class="text-white hover:underline mx-2 sm:mx-3 text-sm sm:text-base">Contact</a>
-      </nav>
+<body>
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="cover-photo"></div>
+        <div class="profile-info">
+            <div class="profile-picture">
+                <img src="assets/images/icon.png" alt="" onerror="this.style.display='none'">
+            </div>
+            <h1 class="profile-name">Naufal Faisa</h1>
+            <p class="profile-bio">Ini adalah deskripsi singkat tentang blog dan penulis. Bisa berisi minat, keahlian, atau informasi lainnya.</p>
+        </div>
     </div>
-  </header>
-
-  <!-- Hero section -->
-  <section class="py-12 sm:py-16 text-white">
-    <div class="content-width mx-auto glass-card rounded-xl p-6 sm:p-8">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 leading-tight">Welcome!</h2>
-      <p class="text-sm sm:text-base opacity-90 leading-relaxed">
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">BlogKu</div>
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link" data-page="home">Beranda</a></li>
+                <li><a href="#" class="nav-link" data-page="articles">Artikel</a></li>
+                <li><a href="#" class="nav-link" data-page="about">Tentang</a></li>
+                <li><a href="#" class="nav-link" data-page="contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <main id="content-area">
+            <!-- Konten default (beranda) -->
+            <div id="home-page">
+                <h2 class="section-title">Artikel Terbaru</h2>
+                <div id="latest-articles"></div>
+            </div>
+            
+            <!-- Halaman Artikel -->
+            <div id="articles-page" style="display:none;">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Cari artikel...">
+                    <button id="search-button">Cari</button>
+                </div>
+                <div id="all-articles"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+            
+            <!-- Halaman Tentang -->
+            <div id="about-page" style="display:none;">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="about-content">
+                    <div class="about-profile">
+                        <div class="profile-picture">
+                            <img src="assets/images/icon.png" alt="Profil Penulis" onerror="this.style.display='none'">
+                        </div>
+                        <div class="profile-info">
+                            <h3>Nama Pengguna</h3>
+                            <p class="profile-bio">Ini adalah deskripsi singkat tentang blog dan penulis. Bisa berisi minat, keahlian, atau informasi lainnya.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-details">
+                        <p>Halo! Saya penulis blog ini. Saya memiliki pengalaman lebih dari 5 tahun dalam menulis tentang berbagai topik termasuk teknologi, pendidikan, dan kehidupan sehari-hari.</p>
+                        <p>Saya lulusan Teknik Informatika dari Universitas Indonesia dan saat ini bekerja sebagai pengembang web freelance.</p>
+                        <h3>Keahlian</h3>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Content Writing</li>
+                            <li>Digital Marketing</li>
+                        </ul>
+                        
+                        <h3>Media Sosial</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Halaman Kontak -->
+            <div id="contact-page" style="display:none;">
+                <h2 class="section-title">Hubungi Saya</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </main>
         
-      </p>
+        <aside class="sidebar">
+            <!-- Hapus bagian Tentang Saya dari sidebar -->
+            <h3 class="sidebar-title">Kategori</h3>
+            <ul class="sidebar-links">
+                <li><a href="#" data-category="technology">Teknologi</a></li>
+                <li><a href="#" data-category="education">Pendidikan</a></li>
+                <li><a href="#" data-category="hobby">Hobi</a></li>
+                <li><a href="#" data-category="life">Kehidupan</a></li>
+            </ul>
+            
+            <h3 class="sidebar-title">Arsip</h3>
+            <ul class="sidebar-links">
+                <li><a href="#" data-archive="2023-07">Juli 2023</a></li>
+                <li><a href="#" data-archive="2023-06">Juni 2023</a></li>
+                <li><a href="#" data-archive="2023-05">Mei 2023</a></li>
+            </ul>
+        </aside>
     </div>
-  </section>
-
-  <!-- Konten utama -->
-  <main class="content-width mx-auto py-8 sm:py-10 -mt-8 sm:-mt-10">
-    <div class="glass-card rounded-xl shadow-xl p-4 sm:p-6">
-      <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Postingan Terbaru</h3>
-
-      <div class="space-y-4 sm:space-y-6">
-        <!-- Artikel 1 -->
-        <a href="/posts/taskmaster-pro.html" class="block glass-card rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
-          <h4 class="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3 leading-snug">Membangun TaskMasterPro dengan Python</h4>
-          <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-            Sistem to-do list interaktif dengan fitur undo, deadline, dan prioritas.
-          </p>
-          <span class="inline-block mt-3 text-xs sm:text-sm text-blue-200 hover:text-white transition">Baca selengkapnya →</span>
-        </a>
-
-        <!-- Artikel 2 -->
-        <a href="/posts/apple-music-bot.html" class="block glass-card rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
-          <h4 class="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3 leading-snug">DriveMusicBot dari Google Drive</h4>
-          <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-            Membuat bot Telegram yang mengakses lagu dari Google Drive sebagai database.
-          </p>
-          <span class="inline-block mt-3 text-xs sm:text-sm text-blue-200 hover:text-white transition">Baca selengkapnya →</span>
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="glass-card mt-8 sm:mt-10 py-6 sm:py-8">
-    <div class="content-width mx-auto text-center">
-      <p class="text-white text-sm sm:text-base">© 2025 Naufal Faisa</p>
-      <div class="mt-3 sm:mt-4 space-x-3 sm:space-x-4">
-        <a href="https://instagram.com/naufalfaisa_" class="text-white hover:text-blue-200 transition text-sm sm:text-base">Instagram</a>
-        <a href="https://github.com/naufalfaisa" class="text-white hover:text-blue-200 transition text-sm sm:text-base">GitHub</a>
-        <a href="https://facebook/naufalfaisa17" class="text-white hover:text-blue-200 transition text-sm sm:text-base">Facebook</a>
-      </div>
-    </div>
-  </footer>
-
+    
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2023 BlogKu. Semua hak dilindungi.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
