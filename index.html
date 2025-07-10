@@ -84,28 +84,36 @@
             </div>
             
             <!-- Halaman Kontak -->
-            <div id="contact-page" style="display:none;">
+            <div id="contact-page" style="display: none;">
                 <h2 class="section-title">Hubungi Saya</h2>
-                <form class="contact-form">
+                <form action="https://formsubmit.co/naufalfaisa86@gmail.com" method="POST" class="contact-form">
                     <div class="form-group">
                         <label for="name">Nama</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subjek</label>
-                        <input type="text" id="subject" required>
+                        <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Pesan</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
+
+                    <!-- Anti-bot dan opsi -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://blog.naufalfaisa.my.id/terkirim.html">
+
+                    <!-- Tombol Kirim -->
                     <button type="submit" class="submit-btn">Kirim Pesan</button>
                 </form>
             </div>
+
         </main>
         
         <aside class="sidebar">
@@ -120,7 +128,7 @@
             <h3 class="sidebar-title"><i class="fas fa-archive"></i> Arsip</h3>
             <ul class="sidebar-links">
                 <li><a href="#" data-archive="2025-07">Juli 2025</a></li>
-                <li><a href="#" data-archive="2025-06">Januari 2025</a></li>
+                <li><a href="#" data-archive="2025-01">Januari 2025</a></li>
                 <li><a href="#" data-archive="2024-08">Agustus 2024</a></li>
             </ul>
         </aside>
@@ -132,15 +140,25 @@
         </p>
     </footer>
     
-    <script src="scripts/data.js"></script>
-    <script src="scripts/display.js"></script>
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/pagination.js"></script>
-    <script src="scripts/search.js"></script>
-    <script src="scripts/filter.js"></script>
-    <script src="scripts/contact.js"></script>
-    <script src="scripts/image.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/main.js"></script>
+    <!-- Data & fungsi utama artikel -->
+    <script src="scripts/articles.js"></script>      <!-- HARUS pertama, karena definisi "articles" & renderArticles -->
+
+    <!-- Script yang BUTUH articles -->
+    <script src="scripts/search.js"></script>        <!-- pakai articles -->
+    <script src="scripts/filter.js"></script>        <!-- pakai articles & renderArticles -->
+    <script src="scripts/pagination.js"></script>    <!-- pakai articles -->
+    <script src="scripts/display.js"></script>       <!-- jika pakai renderArticles -->
+    <script src="scripts/form.js"></script>          <!-- tidak tergantung articles -->
+
+    <!-- Script UI & interaksi umum -->
+    <script src="scripts/navigation.js"></script>    <!-- navigasi antar halaman -->
+    <script src="scripts/contact.js"></script>       <!-- khusus form -->
+    <script src="scripts/image.js"></script>         <!-- lazyload atau preview gambar -->
+    <script src="scripts/menu.js"></script>          <!-- toggle menu nav -->
+
+    <!-- Entry point terakhir -->
+    <script src="scripts/main.js"></script>          <!-- terakhir: menjalankan semua -->
+
+
 </body>
 </html>
