@@ -1,15 +1,39 @@
+body {
+  background-image: url('background-blog.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* Solusi alternatif untuk mobile */
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background-blog.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-body {
-  background-image: url('background-blog.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 .content-width {
