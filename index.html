@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Sederhana</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Profile Header -->
     <div class="profile-header">
-        <div class="cover-photo"></div>
+        <div class="cover-photo" style="background-image: url('assets/images/background.jpg');"></div>
         <div class="profile-info">
             <div class="profile-picture">
                 <img src="assets/images/icon.png" alt="" onerror="this.style.display='none'">
@@ -56,16 +63,6 @@
             <div id="about-page" style="display:none;">
                 <h2 class="section-title">Tentang Saya</h2>
                 <div class="about-content">
-                    <div class="about-profile">
-                        <div class="profile-picture">
-                            <img src="assets/images/icon.png" alt="Profil Penulis" onerror="this.style.display='none'">
-                        </div>
-                        <div class="profile-info">
-                            <h3>Naufal Faisa</h3>
-                            <p class="profile-bio">Ini adalah deskripsi singkat tentang blog dan penulis. Bisa berisi minat, keahlian, atau informasi lainnya.</p>
-                        </div>
-                    </div>
-                    
                     <div class="about-details">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -135,6 +132,15 @@
         <p class="footer-text">© 2023 BlogKu. Semua hak dilindungi.</p>
     </footer>
     
-    <script src="scripts.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/image.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

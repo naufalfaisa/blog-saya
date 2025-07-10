@@ -1,0 +1,61 @@
+/* Reset and Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #3b5998;
+  --secondary-color: #f0f2f5;
+  --border-color: #e1e1e1;
+  --meta-color: #65676b;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --nav-bg: #ffffff;
+  --post-bg: #ffffff;
+  --footer-bg: #f0f2f5;
+  --fallback-bg: #e9ebee;
+  --fallback-pattern: linear-gradient(45deg, #f5f7fa 25%, transparent 25%, transparent 50%, #f5f7fa 50%, #f5f7fa 75%, transparent 75%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --primary-color: #8b9dc3;
+    --secondary-color: #242526;
+    --border-color: #3e4042;
+    --meta-color: #b0b3b8;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --nav-bg: #242526;
+    --post-bg: #242526;
+    --footer-bg: #242526;
+    --fallback-bg: #3e4042;
+    --fallback-pattern: linear-gradient(45deg, #525355 25%, transparent 25%, transparent 50%, #525355 50%, #525355 75%, transparent 75%, transparent);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --primary-color: #8b9dc3;
+  --secondary-color: #242526;
+  --border-color: #3e4042;
+  --meta-color: #b0b3b8;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --nav-bg: #242526;
+  --post-bg: #242526;
+  --footer-bg: #242526;
+  --fallback-bg: #3e4042;
+  --fallback-pattern: linear-gradient(45deg, #525355 25%, transparent 25%, transparent 50%, #525355 50%, #525355 75%, transparent 75%, transparent);
+}
