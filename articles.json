@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Post 1",
+        "date": "3 August 2024",
+        "category": "life",
+        "content": "Lorem ipsum dolor sit amet..."
+    },
+    {
+        "id": 2,
+        "title": "Post 2",
+        "date": "10 July 2025",
+        "category": "coding",
+        "content": "Lorem ipsum dolor sit amet..."
+    }
+]
